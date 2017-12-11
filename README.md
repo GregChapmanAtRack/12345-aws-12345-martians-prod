@@ -33,9 +33,9 @@ Optionally you can create a new override file so that you dont have to edit any 
 ## Configuring Remote State
 Prior to working with this repo, I would suggest getting familiar with terraform Remote states if you are note already. More information on them can be found here: [Remote States](./pre-work/01-Remote-States.md)
 
-This repo also configures a remote backend for state storage in S3. You will need to perform the following steps before preforming a the `terraform init` command. 
+This repo also configures a remote backedn for state storage in S3. You will need to perform the following steps before preforming a the `terraform init` command. 
 
-Create an s3 bucket using the bucket name configured in the terraform config block of main.tf:
+Create an s3 bucket using the bucket name configured in the terraform config block:
 ```
 terraform {
   backend "s3" {

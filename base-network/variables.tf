@@ -1,13 +1,13 @@
 # Descriptive name of the Environment to add to tags (should make sense to humans)
 variable "environment" {
   type        = "string"
-  description = "Prod"
+  description = "The Environment this VPC is being deployed into (prod, dev, test, etc)"
 }
 
 # Name to give to the VPC and associated resources
 variable "name" {
   type        = "string"
-  description = "Martian Co Defaults"
+  description = "The name of the VPC"
 }
 
 # Number of AZs to create
@@ -35,13 +35,13 @@ variable "vpc_cidr_range" {
 variable "public_subnets" {
   type        = "list"
   description = "IP Address Ranges in CIDR Notation for Public Subnets in AZ1-3."
-  default     = ["172.18.0.0/22", "172.18.4.0/22"]
+  default     = ["172.18.0.0/22", "172.18.4.0/22", "172.18.8.0/22"]
 }
 
 # The CIDR Ranges for the Private Subnets
 variable "private_subnets" {
   type        = "list"
-  default     = ["172.18.32.0/21", "172.18.40.0/21"]
+  default     = ["172.18.32.0/21", "172.18.40.0/21", "172.18.48.0/21"]
   description = "IP Address Ranges in CIDR Notation for Private Subnets in AZ 1-3."
 }
 
