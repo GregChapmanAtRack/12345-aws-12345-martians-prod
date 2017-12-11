@@ -5,8 +5,13 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket  = "martian-prod-tfstate"
+    bucket  = "martian-prod-tfstate-gbc"
     key     = "terraform.tfstate"
     encrypt = "true"
   }
+}
+
+module "BaseNetwork" {
+	source = "./base-network"
+	
 }
