@@ -26,4 +26,6 @@ resource "aws_instance" "First-EC2-server-public" {
 	instance_type = "t2.micro"
 	tags = { name = "First-Instance" }
 	subnet_id = "${module.Base-Newtork-GBC.public_subnets[0]}"
+	user_data = "${file("./bootstrap.sh")}"
 }
+
