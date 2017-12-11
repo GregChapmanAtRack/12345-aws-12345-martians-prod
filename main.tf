@@ -11,7 +11,7 @@ terraform {
   }
 }
 
-module {
+module "Base-Newtork-GBC" {
 	source ="./base-network"
 	environment="Martian Prod"
 	name = "Prod-Martian-subnets-Ticket-1111"
